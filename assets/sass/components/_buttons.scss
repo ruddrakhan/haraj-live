@@ -1,6 +1,14 @@
 /*-------------------------------------------------
     [ ## Buttons ]
 */
+button:disabled{
+    background-color: $bg--gray;
+    color: $base--color;
+    cursor: auto;
+    &:hover{
+        color: $base--color
+    }
+}
 input[type="button"] {
 	@extend button;
 }
@@ -19,6 +27,7 @@ input[type="reset"],
 input[type="submit"] {
 	cursor: pointer;
 	-webkit-appearance: button;
+    appearance: none;
 	&:focus {
 		outline: none;
 	}	

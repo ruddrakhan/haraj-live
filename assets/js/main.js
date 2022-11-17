@@ -448,15 +448,31 @@ $('.account-control-btn').on('click', function () {
   $('.account-area').toggleClass('change-form');
 })
 
+$('.account-control-btn-email').on('click', function () {
+  $('.account-area').toggleClass('change-form-remove-email');
+  $('.account-area-email').toggleClass('change-form-email');
+})
+
 $('.account-control-btn-two').on('click', function () {
   $('.account-area').toggleClass('change-form-remove');
   $('.account-area-two').toggleClass('change-form-two');
+})
+
+$('.account-control-btn-two-email').on('click', function () {
+  $('.account-area-email').toggleClass('change-form-remove-email');
+  $('.account-area-two-email').toggleClass('change-form-two-email');
 })
 
 $('.account-control-btn-three').on('click', function () {
   $('.account-area').toggleClass('change-form-hide');
   $('.account-area-two').toggleClass('change-form-none');
   $('.account-area-three').toggleClass('change-form-three');
+})
+
+$('.account-control-btn-three-email').on('click', function () {
+  $('.account-area').toggleClass('change-form-hide-email');
+  $('.account-area-two-email').toggleClass('change-form-none-email');
+  $('.account-area-three-email').toggleClass('change-form-three-email');
 })
 
 })(jQuery);

@@ -488,6 +488,18 @@
     &.change-form-remove{
         display: none;
     }
+    &.change-form-remove-email{
+        display: none;
+    }
+}
+.account-area-email{
+    display: none;
+    &.change-form-email{
+        display: block;
+    }
+    &.change-form-remove-email{
+        display: none;
+    }
 }
 .account-area-two{
     display: none;
@@ -501,9 +513,27 @@
         display: none;
     }
 }
+.account-area-two-email{
+    display: none;
+    &.change-form-two-email{
+        display: block;
+    }
+    &.change-form-hide-email{
+        display: none;
+    }
+    &.change-form-none-email{
+        display: none;
+    }
+}
 .account-area-three{
     display: none;
     &.change-form-three{
+        display: block;
+    }
+}
+.account-area-three-email{
+    display: none;
+    &.change-form-three-email{
         display: block;
     }
 }
@@ -4757,14 +4787,18 @@
                 font-weight: 400;
                 color: #424242;
             }
-            &::after{
-                position: absolute;
-                content: '\f105';
-                font-family: 'Font Awesome 5 Free';
-                font-size: 22px;
-                top: 15px;
-                right: 10px;
-                font-weight: 900;
+        }
+        &.has-child{
+            a{
+                &::after{
+                    position: absolute;
+                    content: '\f105';
+                    font-family: 'Font Awesome 5 Free';
+                    font-size: 22px;
+                    top: 15px;
+                    right: 10px;
+                    font-weight: 900;
+                }
             }
         }
         &:hover{
