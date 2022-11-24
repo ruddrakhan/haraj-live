@@ -433,13 +433,28 @@ $("#customFileUpload").change(function() {
   readURL(this);
 });
 
+// $(".sell-cetagory-left-list li a").on("click", function () {
+//   var element = $(this).parent("li");
+//   if (element.hasClass("active")) {
+//   }
+//   else {
+//     element.siblings("li").removeClass("active");
+//     element.addClass("active");
+//   }
+//   $(".sell-category-wrapper-list").addClass("active")
+// });
+
 $(".sell-cetagory-left-list li a").on("click", function () {
   var element = $(this).parent("li");
   if (element.hasClass("active")) {
+    element.removeClass("active");
+    element.children("ul").slideUp(500);
   }
   else {
-    element.siblings("li").removeClass("active");
+    element.siblings("li").removeClass('active');
     element.addClass("active");
+    element.siblings("li").find("ul").slideUp(500);
+    element.children('ul').slideDown(500);
   }
   $(".sell-category-wrapper-list").addClass("active")
 });

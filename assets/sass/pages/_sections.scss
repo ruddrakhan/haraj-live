@@ -4742,15 +4742,14 @@
 
   .sell-category-wrapper-list{
     position: relative;
-    display: flex;
     width: 100%;
     &.active{
         .sell-cetagory-right-list{
-            display: block;
+            visibility: visible;
         }
         .sell-cetagory-left-list{
             @media only screen and (max-width: 767px) {
-                display: none;
+                visibility: hidden;
             }
         }
     }
@@ -4762,7 +4761,6 @@
         width: 100%;
     }
     li{
-        position: relative;
         border-bottom: 1px solid #e0e0e0;
         display: flex;
         justify-content: space-between;
@@ -4780,6 +4778,17 @@
                 height: 28px;
                 display: inherit;
                 vertical-align: middle;
+            }
+            i{
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: $base--color;
+                color: rgba($white, 0.9);
+                font-size: 14px;
             }
             span{
                 padding-left: 15px;
@@ -4806,19 +4815,55 @@
         }
     }
 }
-.sell-cetagory-left-list{
-    li{
-        &.active{
-            background-color: #e0e0e0;
-            a{
-                &::after{
-                    color: $color--heading;
-                }
-            }
-        }
-    }
-}
+.sell-cetagory-left-list li:nth-of-type(2n) a i, .sell-cetagory-right-list li:nth-of-type(2n) a i {
+    background-color: #a175d9;
+  }
+  .sell-cetagory-left-list li:nth-of-type(3n) a i, .sell-cetagory-right-list li:nth-of-type(3n) a i {
+    background-color: #ffd200;
+  }
+  .sell-cetagory-left-list li:nth-of-type(4n) a i, .sell-cetagory-right-list li:nth-of-type(4n) a i {
+    background-color: #6bcebb;
+  }
+  .sell-cetagory-left-list li:nth-of-type(5n) a i, .sell-cetagory-right-list li:nth-of-type(5n) a i {
+    background-color: #fb8636;
+  }
+  .sell-cetagory-left-list li:nth-of-type(6n) a i, .sell-cetagory-right-list li:nth-of-type(6n) a i {
+    background-color: #327fb6;
+  }
+  .sell-cetagory-left-list li:nth-of-type(7n) a i, .sell-cetagory-right-list li:nth-of-type(7n) a i {
+    background-color: #20c3f3;
+  }
+  .sell-cetagory-left-list li:nth-of-type(8n) a i, .sell-cetagory-right-list li:nth-of-type(8n) a i {
+    background-color: #a3ce71;
+  }
+  .sell-cetagory-left-list li:nth-of-type(9n) a i, .sell-cetagory-right-list li:nth-of-type(9n) a i {
+    background-color: #e379b6;
+  }
+  .sell-cetagory-left-list li:nth-of-type(10n) a i, .sell-cetagory-right-list li:nth-of-type(10n) a i {
+    background-color: #e379b6;
+  }
+// .sell-cetagory-left-list{
+//     li{
+//         display: flex;
+//         a{
+//             width: 50%;
+//         }
+//         &.active{
+//             background-color: #e0e0e0;
+//             a{
+//                 &::after{
+//                     color: $color--heading;
+//                 }
+//             }
+//         }
+//     }
+// }
 .sell-cetagory-right-list{
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
     display: none;
     li{
         a{
