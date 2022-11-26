@@ -480,63 +480,6 @@
         font-weight: 600;
     }
 }
-.account-area{
-    display: none;
-    &.change-form{
-        display: block;
-    }
-    &.change-form-remove{
-        display: none;
-    }
-    &.change-form-remove-email{
-        display: none;
-    }
-}
-.account-area-email{
-    display: none;
-    &.change-form-email{
-        display: block;
-    }
-    &.change-form-remove-email{
-        display: none;
-    }
-}
-.account-area-two{
-    display: none;
-    &.change-form-two{
-        display: block;
-    }
-    &.change-form-hide{
-        display: none;
-    }
-    &.change-form-none{
-        display: none;
-    }
-}
-.account-area-two-email{
-    display: none;
-    &.change-form-two-email{
-        display: block;
-    }
-    &.change-form-hide-email{
-        display: none;
-    }
-    &.change-form-none-email{
-        display: none;
-    }
-}
-.account-area-three{
-    display: none;
-    &.change-form-three{
-        display: block;
-    }
-}
-.account-area-three-email{
-    display: none;
-    &.change-form-three-email{
-        display: block;
-    }
-}
 #show_hide_password{
     position: relative;
 }
